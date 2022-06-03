@@ -78,6 +78,9 @@ Exportação para outros formatos (Word, OpenOffice, RTF, Epub, LaTeX e etc...) 
 ``` <Enter>
 ```
 
+```
+```
+
 
 
 
@@ -96,6 +99,16 @@ Exportação para outros formatos (Word, OpenOffice, RTF, Epub, LaTeX e etc...) 
 </div>
 ```
 
+<div>
+    <h1>
+        Header 1
+    </h1>
+    <h2>
+        Header 2
+    </h2>
+    <a>texto</a>
+</div>
+
 
 
 
@@ -107,6 +120,10 @@ Exportação para outros formatos (Word, OpenOffice, RTF, Epub, LaTeX e etc...) 
 <https://doity.com.br/encosis2022>
 <a href="https://doity.com.br/encosis2022">ENCOSIS 2022</a>
 ```
+
+[ENCOSIS 2022](https://doity.com.br/encosis2022)
+<https://doity.com.br/encosis2022>
+<a href="https://doity.com.br/encosis2022">ENCOSIS 2022</a>
 
 
 
@@ -122,6 +139,12 @@ Vários estilos suportados: como **negrito**, *itálico*, `código`, emoji :smil
 > citação
 ```
 
+Vários estilos suportados: como **negrito**, *itálico*, `código`, emoji :smile:, ~~tachado~~, <u>sublinhado</u>, <mark>realce</mark> e etc.
+
+---
+
+> citação
+
 
 
 
@@ -132,13 +155,15 @@ Vários estilos suportados: como **negrito**, *itálico*, `código`, emoji :smil
 ![logo](./figures/fucapi-logo.jpg)
 ```
 
-
+![logo](./figures/fucapi-logo.jpg)
 
 
 
 ```
 <img src="./figures/fucapi-logo.jpg" style="zoom:80%;"/>
 ```
+
+<img src="./figures/fucapi-logo.jpg" style="zoom:80%;"/>
 
 
 
@@ -157,7 +182,12 @@ void foo() {
 ```
 ````
 
-
+``` c
+#include <stdio.h>
+void foo() {
+    printf("Hello ENCOSIS 2022!\n");
+}
+```
 
 
 
@@ -170,6 +200,11 @@ def foo():
 ```
 ````
 
+``` python
+def foo():
+    print("Hello ENCOSIS 2022!\n")
+```
+
 
 
 
@@ -181,6 +216,10 @@ def foo():
 | -------- | ------------- | ------------- | ------ | ------- |
 | 0.000001 | April 08, 2022 | First release | Me     | mail@me |
 ```
+
+| Version  | Date           | Description   | Author | Email   |
+| -------- | -------------- | ------------- | ------ | ------- |
+| 0.000001 | April 08, 2022 | First release | Me     | mail@me |
 
 
 
@@ -195,7 +234,10 @@ def foo():
 - [x] check
 ```
 
-
+* item 1
+- item 2
+3. item 3
+- [x] check
 
 
 
@@ -207,7 +249,9 @@ x^n + y^n = z^n
 $$
 ```
 
-
+$$
+x^n + y^n = z^n
+$$
 
 
 
@@ -216,6 +260,10 @@ $$
 \sqrt{x^2+1}
 $$
 ```
+
+$$
+\sqrt{x^2+1}
+$$
 
 
 
@@ -255,6 +303,14 @@ graph TD
 ```
 ````
 
+``` mermaid
+graph TD
+	A(A:texto) --> B
+	A -.-> C
+	B([B:texto]) ==> D
+	C[(C:texto)] --- D[D:texto]
+```
+
 
 
 
@@ -275,6 +331,17 @@ deactivate STM32
 IRQ-->>-STM32: sets feedback
 ```
 ````
+
+``` mermaid
+sequenceDiagram
+
+activate STM32
+STM32->>+ESP8266: AT Command
+ESP8266->>-STM32: AT Response
+STM32-->>+IRQ: IRQ Handler
+deactivate STM32
+IRQ-->>-STM32: sets feedback
+```
 
 
 
@@ -303,6 +370,23 @@ LOOP --> TEST : AT INTERFACE ERROR
 ```
 ````
 
+``` mermaid
+stateDiagram
+
+[*] --> WAKEUP
+WAKEUP --> TEST : OK
+TEST --> CONFIG : OK
+CONFIG --> CWSTATE?
+CWSTATE? --> WIFI : NOT_STARTED or DISCONNECTED
+CWSTATE? --> MQTT : CONNECTED_GOT_IP or OK
+WIFI --> MQTT : OK
+MQTT --> WIFI : ERROR
+MQTT --> CONFIG : CRITICAL ERROR
+MQTT --> LOOP : OK
+LOOP --> CONFIG : RECONFIGURE CONNECTION
+LOOP --> TEST : AT INTERFACE ERROR
+```
+
 
 
 
@@ -324,6 +408,18 @@ gantt
 	Férias: b1, after a3, 30d
 ```
 ````
+
+``` mermaid
+gantt
+	title Ano Ideal
+	dateFormat YYYY-MM-DD
+	section Trabalho
+	Projeto 1: a1, 2022-04-01, 110d
+	Projeto 2: a2, after a1, 110d
+	Projeto 3: a3, after a2, 110d
+	section Férias
+	Férias: b1, after a3, 30d
+```
 
 
 
@@ -359,6 +455,30 @@ classDiagram
 ```
 ````
 
+``` mermaid
+classDiagram
+	class App_HandleTypeDef
+	App_HandleTypeDef: +App_StatusTypeDef status
+	App_HandleTypeDef: +App_Params params
+	App_HandleTypeDef: +App_Init()
+	App_HandleTypeDef: +App_BuildStateMachine()
+	App_HandleTypeDef: +App_Main()
+	App_HandleTypeDef: +App_DebugLog()
+	
+	class PCA9546A_HandleTypeDef  {
+		+I2C_HandleTypeDef * hi2c
+		+uint8_t ctrlreg
+		+GPIO_TypeDef * RST_GPIOx
+		+uint16_t RST_Pin
+		+PCA9546A_Init()
+		+PCA9546A_Reset()
+		+PCA9546A_SelectChannel()
+		+PCA9546A_ChannelStatus()
+	}
+	
+	App_Params <|-- PCA9546A_HandleTypeDef
+```
+
 
 
 
@@ -379,6 +499,17 @@ commit
 merge newbranch
 ```
 ````
+
+``` mermaid
+gitGraph:
+commit
+branch newbranch
+checkout newbranch
+commit
+checkout master
+commit
+merge newbranch
+```
 
 
 
@@ -410,7 +541,7 @@ merge newbranch
 
 
 
-<img src="/home/icts/Downloads/ictalk-typora/typora-encosis-2022/figures/typora-review.png" style="zoom:80%" />
+<img src="./figures/typora-review.png" style="zoom:80%" />
 
 # XI Encontro de Computação e Sistemas de Informação - ENCOSIS 2022
 
@@ -425,9 +556,10 @@ O Typora é uma ferramenta simples e poderosa que auxilia no processo de documen
 **Instrutor: Nilo Edson**
 
 <div>
-    <img src="./figures/insta-icon.jpg" style="zoom:3%"/>
-    <a src="https://www.instagram.com/nedson.br/">@nedson.br</a>
+    <img src="./figures/linkedin-logo.png" style="zoom:3%"/>
+    <a src="https://www.linkedin.com/in/nedson/">/in/nedson/</a>
 </div>
+
 
 
 
@@ -442,11 +574,12 @@ O Typora é uma ferramenta simples e poderosa que auxilia no processo de documen
 - MAYER, Christian. *"The Art of Clean Code: Best Practices to Eliminate Complexity and Simplify Your Life"*. *Capítulo 4*. Kindle, 2022.
 
 <div align="center">
-    <img src="./figures/book1.jpg" style="zoom:50%"/>
-    <img src="./figures/book2.jpg" style="zoom:65%"/>
-    <img src="./figures/book3.jpg" style="zoom:55%"/>
-    <img src="./figures/book4.jpg" style="zoom:52%"/>
+    <img src="./figures/book1.jpg" style="zoom:40%"/>
+    <img src="./figures/book2.jpg" style="zoom:55%"/>
+    <img src="./figures/book3.jpg" style="zoom:45%"/>
+    <img src="./figures/book4.jpg" style="zoom:42%"/>
 </div>
+
 
 
 
@@ -503,9 +636,10 @@ soft -- descreve --> source
 
 
 <div align="center">
-    <img src="./figures/modulo-lorawan-radioenge.jpg" style="zoom:65%"/>
-    <img src="./figures/radioenge-logo.png" style="zoom:30%"/>
+    <img src="./figures/modulo-lorawan-radioenge.jpg" style="zoom:55%"/>
+    <img src="./figures/radioenge-logo.png" style="zoom:20%"/>
 </div>
+
 
 
 
@@ -522,7 +656,7 @@ RXD:--------------------------------------------------------AT_OK\r\n--
 
 
 
-<img src="/home/icts/Downloads/ictalk-typora/typora-encosis-2022/figures/use-comments.png" style="zoom:75%" />
+<img src="./figures/use-comments.png" style="zoom:75%" />
 
 
 
