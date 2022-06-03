@@ -490,6 +490,7 @@ classDiagram
 ````
 ``` mermaid
 gitGraph:
+branch master
 commit
 branch newbranch
 checkout newbranch
@@ -502,6 +503,7 @@ merge newbranch
 
 ``` mermaid
 gitGraph:
+branch master
 commit
 branch newbranch
 checkout newbranch
