@@ -12,10 +12,8 @@ O Typora é uma ferramenta simples e poderosa que auxilia no processo de documen
 
 **Instrutor: Nilo Edson**
 
-<div>
-    <img src="./figures/linkedin-logo.png" style="zoom:3%"/>
-    <a src="https://www.linkedin.com/in/nedson/">/in/nedson/</a>
-</div>
+<img src="./figures/linkedin-logo.png" style="zoom:3%"/> [/nedson/](https://www.linkedin.com/in/nedson/)
+
 
 
 
@@ -557,12 +555,7 @@ O Typora é uma ferramenta simples e poderosa que auxilia no processo de documen
 
 **Instrutor: Nilo Edson**
 
-<div>
-    <img src="./figures/linkedin-logo.png" style="zoom:3%"/>
-    <a src="https://www.linkedin.com/in/nedson/">/in/nedson/</a>
-</div>
-
-
+<img src="./figures/linkedin-logo.png" style="zoom:3%"/> [/nedson/](https://www.linkedin.com/in/nedson/)
 
 
 
