@@ -247,29 +247,9 @@ classDiagram
 
 class LoRaWAN {
 	enum eStatus
-	enum eBaudrate
-	enum eNJM
-	enum eCFM
-	enum eCLASS
-	enum eADR
 	enum eDR
-	enum NJS
-	eStatus checkSerialInterface()
-	eStatus setActivationMode()
-	eStatus setChannelMask()
-	eStatus setPacketDeliveryConfirmation()
-	eStatus setDeviceClass()
-	eStatus setAdaptiveDatarateConfiguration()
+	enum eNJS
 	eStatus setDatarate()
-	eStatus setNumberOfRetries()
-	eStatus setRX1Delay()
-	eStatus setRX2Delay()
-	eStatus getDeviceAddress()
-	eStatus getNetworkSessionKey()
-	eStatus getApplicationSessionKey()
-	eStatus checkConnectionStatus()
-	eStatus sendString()
-	eStatus sendRaw()
 }
 ```
 
@@ -286,20 +266,29 @@ class LoRaWAN {
 ```mermaid
 sequenceDiagram
 
-Note over LoRaWAN.h, EndDevice : Conexão UART estabelecida corretamente
+Note over LoRaWAN.h, EndDevice : Conexão UART
 opt chamada do método
-    LoRaWAN.h ->> EndDevice : LoRaWAN::sendAtCommand()
-    Note over LoRaWAN.h, EndDevice : envio usando 'polling'
+	
+	opt LoRaWAN::sendAtCommand()
+		Note over LoRaWAN.h : prepara comando
+		alt
+			LoRaWAN.h ->> EndDevice : LoRaWAN::huart.print()
+		else
+			EndDevice --> LoRaWAN.h : erro na UART (comando não enviado)
+			Note over LoRaWAN.h : retorna erro
+		end
+	end
 
     loop LoRaWAN::waitResponse()
         alt
         	Note over EndDevice : processa comando
             EndDevice ->> LoRaWAN.h : LoRaWAN::huart.readString()
-            Note over LoRaWAN.h, EndDevice : recepção usando 'polling'
             Note over LoRaWAN.h : processa resposta
+            Note over LoRaWAN.h : retorna status
         else
             EndDevice --> LoRaWAN.h : Nenhuma resposta
             Note over LoRaWAN.h : temporizador expira
+            Note over LoRaWAN.h : retorna ausência de resposta
         end
     end
 end

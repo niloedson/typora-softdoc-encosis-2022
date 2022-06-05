@@ -17,14 +17,11 @@ O Typora é uma ferramenta simples e poderosa que auxilia no processo de documen
 
 
 
-
-
 ### Objetivos
 
-1. Mostrar as funcionalidades e recursos do Typora;
-2. Mostrar o processo de documentação em um projeto real;
+- Dia 1: Mostrar as funcionalidades e recursos do Typora;
 
-
+- Dia 2: Mostrar o processo de documentação de um projeto real;
 
 
 
@@ -41,8 +38,6 @@ O Typora é uma ferramenta simples e poderosa que auxilia no processo de documen
 
 
 
-
-
 ### Conteúdo de um projeto
 
 ```
@@ -54,8 +49,6 @@ repo / Project
 ```
 
 - `README.md` - Arquivo de documentação escrito em **Markdown**.
-
-
 
 
 
@@ -78,8 +71,6 @@ Exportação para outros formatos (Word, OpenOffice, RTF, Epub, LaTeX e etc...) 
 
 ```
 ```
-
-
 
 
 
@@ -109,8 +100,6 @@ Exportação para outros formatos (Word, OpenOffice, RTF, Epub, LaTeX e etc...) 
 
 
 
-
-
 ### Criar hyperlinks
 
 ```
@@ -122,8 +111,6 @@ Exportação para outros formatos (Word, OpenOffice, RTF, Epub, LaTeX e etc...) 
 [ENCOSIS 2022](https://doity.com.br/encosis2022)
 <https://doity.com.br/encosis2022>
 <a href="https://doity.com.br/encosis2022">ENCOSIS 2022</a>
-
-
 
 
 
@@ -145,8 +132,6 @@ Vários estilos suportados: como **negrito**, *itálico*, `código`, emoji :smil
 
 
 
-
-
 ### Inserir imagens
 
 ```
@@ -162,8 +147,6 @@ Vários estilos suportados: como **negrito**, *itálico*, `código`, emoji :smil
 ```
 
 <img src="./figures/fucapi-logo.jpg" style="zoom:80%;"/>
-
-
 
 
 
@@ -205,21 +188,17 @@ def foo():
 
 
 
-
-
 ### Tabelas
 
 ```
 | Version  | Date          | Description   | Author | Email   |
 | -------- | ------------- | ------------- | ------ | ------- |
-| 0.000001 | April 08, 2022 | First release | Me     | mail@me |
+| 0.000001 | May 02, 2022 | First release | Me     | mail@me |
 ```
 
-| Version  | Date           | Description   | Author | Email   |
-| -------- | -------------- | ------------- | ------ | ------- |
-| 0.000001 | April 08, 2022 | First release | Me     | mail@me |
-
-
+| Version  | Date         | Description   | Author | Email   |
+| -------- | ------------ | ------------- | ------ | ------- |
+| 0.000001 | May 02, 2022 | First release | Me     | mail@me |
 
 
 
@@ -251,8 +230,6 @@ $$
 x^n + y^n = z^n
 $$
 
-
-
 ```latex
 $$
 \sqrt{x^2+1}
@@ -265,14 +242,10 @@ $$
 
 
 
-
-
 ### Temas
 
 * Temas disponíveis no próprio site ([link](https://theme.typora.com.cn/));
 * Customização de temas também é possível ([link](https://theme.typora.com.cn/doc/Write-Custom-Theme/));
-
-
 
 
 
@@ -281,9 +254,7 @@ $$
 * **Permite criar diagramas e visualizações usando texto e código** ([link](https://mermaid-js.github.io/mermaid/#/README));
 * Reduz o tempo, esforço e ferramentas necessárias para criar diagramas e gráficos modificáveis, resultando em conteúdo mais **inteligente** e **reutilizável**;
 * Como uma **ferramenta de diagramação baseada em texto**, permite atualizações rápidas e torna a documentação muito mais fácil;
-* Também pode ser incluído em **scripts de produção** e outras peças de código conforme requisito;
-
-
+* Também pode ser incluído em **scripts de produção** e outras peças de código, conforme requisito;
 
 
 
@@ -308,8 +279,6 @@ graph TD
 	B([B:texto]) ==> D
 	C[(C:texto)] --- D[D:texto]
 ```
-
-
 
 
 
@@ -340,8 +309,6 @@ STM32-->>+IRQ: IRQ Handler
 deactivate STM32
 IRQ-->>-STM32: sets feedback
 ```
-
-
 
 
 
@@ -387,8 +354,6 @@ LOOP --> TEST : AT INTERFACE ERROR
 
 
 
-
-
 ### Diagrama de Gantt
 
 - Sintaxe básica ([link](https://mermaid-js.github.io/mermaid/#/./gantt));
@@ -418,8 +383,6 @@ gantt
 	section Férias
 	Férias: b1, after a3, 30d
 ```
-
-
 
 
 
@@ -479,8 +442,6 @@ classDiagram
 
 
 
-
-
 ### Gráfico Git
 
 - Sintaxe básica ([link](https://mermaid-js.github.io/mermaid/#/./gitgraph));
@@ -510,8 +471,6 @@ checkout master
 commit
 merge newbranch
 ```
-
-
 
 
 
@@ -559,8 +518,6 @@ O Typora é uma ferramenta simples e poderosa que auxilia no processo de documen
 
 
 
-
-
 ### Referências
 
 - AMBLER, Scott W. *"Agile Modeling: Effective Practices for eXtreme Programming and the Unified Process"*. *Capítulo 14*. Wiley, 2002.
@@ -576,10 +533,6 @@ O Typora é uma ferramenta simples e poderosa que auxilia no processo de documen
 </div>
 
 
-
-
-
-
 ### Do Manifesto Ágil
 
 | Esquerda                    | >    | Direita                                |
@@ -589,7 +542,9 @@ O Typora é uma ferramenta simples e poderosa que auxilia no processo de documen
 | **Colaboração do cliente**  | >    | Negociação por contrato                |
 | **Resposta à mudança**      | >    | Seguir um plano                        |
 
+Os valores do lado esquerdo pesam muito mais que os valores do lado direito. E logo nota-se que o processo de documentação compreende os dois primeiros pontos do lado direito. Portanto, decidir usar a ferramenta Typora não pode suprimir as necessidades dos desenvolvedores e suas interações e, tampouco, comprometer o esforço do processo de desenvolvimento no código da solução.
 
+Mas isso **não torna o processo de documentação menos importante** (como já visto durante o dia 1 do minicurso).
 
 
 
@@ -604,7 +559,38 @@ docs -- é --> soft[Documentação]
 soft -- descreve --> source
 ```
 
+**Como saber o que incluir no documento da solução?** <mark>Sabendo o que não precisa constar nele.</mark>
 
+Como desenvolvedores, sempre **gastamos mais tempo criando modelos, arquiteturas, relações de entidades e lendo códigos do que os escrevendo propriamente**. Por isso, **quaisquer informações escritas no documento que ajudarem a acelerar esse processo de entendimento devem ser prioridade**.
+
+Tudo o que puder **constar no código fonte que facilite sua leitura e compreensão** já **retira o peso do que precisa ser explicado no documento por escrito**. Assim, é imprescindível que alguns princípios básicos durante o desenvolvimento do código sejam seguidos.
+
+
+
+### O Projeto real
+
+**Módulo LoRaWAN End Device da Radioenge:**
+
+- Página do produto no site da fabricante: ([link](https://www.radioenge.com.br/en/product/lorawan-module/));
+- Documentação do dispositivo: ([link](https://www.radioenge.com.br/storage/2021/08/manual-lorawan-2021.pdf)).
+
+<div align="center">
+    <img src="./figures/modulo-lorawan-radioenge.jpg" style="zoom:55%"/>
+    <img src="./figures/radioenge-logo.png" style="zoom:20%"/>
+</div>
+- Realizar a comunicação e integração entre uma SoC (System on Chip) e este módulo.
+
+- O dispositivo utiliza uma interface UART para comunicação através de comandos AT.
+
+```
+TXD:-----------------------AT\r\n--------------------------------------
+    <preparação do comando>      <processamento da resposta>
+RXD:--------------------------------------------------------AT_OK\r\n--
+```
+
+
+
+---
 
 
 
@@ -622,42 +608,28 @@ soft -- descreve --> source
 
 
 
----
-
-
-
-**Módulo LoRaWAN EndDevice da Radioenge:**
-
-
-
-<div align="center">
-    <img src="./figures/modulo-lorawan-radioenge.jpg" style="zoom:55%"/>
-    <img src="./figures/radioenge-logo.png" style="zoom:20%"/>
-</div>
-
-
-
-
-```
-TXD:-----------------------AT\r\n--------------------------------------
-    <preparação do comando>      <processamento da resposta>
-RXD:--------------------------------------------------------AT_OK\r\n--
-```
-
-
-
 
 ---
 
 
+
+**Como o código pode conter documentação seguindo os princípios básicos apresentados:**
 
 <img src="./figures/use-comments.png" style="zoom:75%" />
 
+Convém pensar no módulo LoRaWAN End Device como um grande bloco que precisa ser desenvolvido. Logo, espera-se a criação de uma classe e/ou biblioteca que se encarregue especificamente de implementar os métodos e funções necessárias para lidar com a comunicação direta com o módulo. Assim, o **princípio 1** é atendido. 
 
+No exemplo da imagem, várias coisas podem ser observadas.
 
----
+O **princípio 3** pode ser observado ao observar o padrão dos nomes de classe e métodos utilizados (padrão no mercado) com classes iniciando em maiúsculas e métodos iniciando com minúsculas. Pode-se observar o padrão de usar um "e" minúsculo precedendo os nomes nas enumerações. Fora isso, o padrão dos comentários usando [doxygen](https://www.doxygen.nl/index.html) ainda é outra convenção que se mistura com o **princípio 2** sobre escrever para humanos (e não máquinas) e o **princípio 4** sobre o uso inteligente de comentários.
 
+Perceba que o nome `setDatarate` descreve exatamente o que a função faz. E escolher bons nomes de variáveis e funções também auxilia na leitura e análise do código por um outro humano. Nota-se também a tentativa de manter uma alta correlação entre o datasheet do módulo e a implementação no código fonte. A enumeração `eNJS` na documentação guarda "0" para representar que o dispositivo está desconectado e "1" caso contrário. A ordem escrita na enumeração segue exatamente esse padrão documentado e, portanto, não foi algo decidido arbitrariamente durante a implementação. 
 
+> A correlação entre documentações deve ser a maior possível.
+
+Outra decisão tomada foi usar uma nomenclatura familiar na função `setDatarate()` e em seu escopo usar uma nomenclatura que exprime exatamente o que a função deve fazer com `send_AT_DR()` pois, é exatamente isso que a função deve fazer: enviar um `AT+DR=<datarate>` pela interface serial, na comunicação com o módulo. 
+
+A facilidade que o uso do doxygen traz pode ser visto na imagem. Ao passar o mouse ou selecionar o nome da função, uma janela aparece com uma descrição mais detalhada sobre ela que foi definida pelo próprio comentário adicionado na implementação da função.
 
 ```c++
 /**
@@ -672,9 +644,11 @@ LoRaWAN::eStatus LoRaWAN::setDatarate(LoRaWAN::eDR datarate)
 }
 ```
 
+Além disso, o comentário sobre a enumeração `eDR` traz mais facilmente o que cada um dos valores significa. Dessa forma, podemos trazer para o código também algo definido na documentação do datasheet do módulo de maneira mais fácil para o desenvolvedor que estiver lendo o código fonte, evitando que ele perca tempo precioso indo buscar informações no datasheet do módulo para saber do que se trata o código ali implementado.
 
+O **princípio 6** permeia a abordagem utilizada para o desenvolvimento da classe. Ela sendo autocontida, não precisando de dependências externas ou não interferindo no funcionamento de outros blocos da solução, garante que ela pode ser retirada da aplicação geral como um todo sem afetar o funcionamento da solução. Da mesma forma, outras instâncias da mesma classe podem ser usadas para se comunicar com diferentes módulos se fosse necessário na solução. Pensar nas possibilidades de expansão ou portabilidade da solução é essencial para diminuir o tempo de implementação de outros projetos que utilizem o mesmo módulo, pois já existiria uma classe para sua devida utilização e bastaria levar os arquivos da classe para esse outro projeto.
 
----
+O **princípio 7** pode ser observado no exemplo também. Perceba que o retorno das funções estão contidos na definição de uma enumeração `LoRaWAN::eStatus`, logo, a imagem da função está contida dentro de um escopo limitado de valores conforme essa mesma enumeração. Assim, não é preciso se preocupar com retornos inesperados e temos capilaridade suficiente para tratar cada retorno definido pela enumeração. Da mesma forma, o parâmetro passado pela função está contido na definição de uma enumeração `LoRaWAN::eDR` e, logo, o domínio da função também está contido dentro de um escopo limitado de valores. Assim, não é preciso tratar os valores dos argumentos  que são passados para a função. Isso diminui drasticamente os casos espúrios que poderiam afetar o funcionamento correto da função. 
 
 
 
@@ -696,34 +670,16 @@ LoRaWAN::eStatus LoRaWAN::setDatarate(LoRaWAN::eDR datarate)
 
 
 
+**Diagrama de classe (simplificado):**
+
 ```mermaid
 classDiagram
 
 class LoRaWAN {
 	enum eStatus
-	enum eBaudrate
-	enum eNJM
-	enum eCFM
-	enum eCLASS
-	enum eADR
 	enum eDR
-	enum NJS
-	eStatus checkSerialInterface()
-	eStatus setActivationMode()
-	eStatus setChannelMask()
-	eStatus setPacketDeliveryConfirmation()
-	eStatus setDeviceClass()
-	eStatus setAdaptiveDatarateConfiguration()
+	enum eNJS
 	eStatus setDatarate()
-	eStatus setNumberOfRetries()
-	eStatus setRX1Delay()
-	eStatus setRX2Delay()
-	eStatus getDeviceAddress()
-	eStatus getNetworkSessionKey()
-	eStatus getApplicationSessionKey()
-	eStatus checkConnectionStatus()
-	eStatus sendString()
-	eStatus sendRaw()
 }
 ```
 
@@ -733,31 +689,40 @@ class LoRaWAN {
 
 
 
+**Diagrama de sequência da solução:**
+
 ```mermaid
 sequenceDiagram
 
-Note over LoRaWAN.h, EndDevice : Conexão UART estabelecida corretamente
+Note over LoRaWAN.h, EndDevice : Conexão UART
 opt chamada do método
-    LoRaWAN.h ->> EndDevice : LoRaWAN::sendAtCommand()
-    Note over LoRaWAN.h, EndDevice : envio usando 'polling'
+	
+	opt LoRaWAN::sendAtCommand()
+		Note over LoRaWAN.h : prepara comando
+		alt
+			LoRaWAN.h ->> EndDevice : LoRaWAN::huart.print()
+		else
+			EndDevice --> LoRaWAN.h : erro na UART (comando não enviado)
+			Note over LoRaWAN.h : retorna erro
+		end
+	end
 
     loop LoRaWAN::waitResponse()
         alt
         	Note over EndDevice : processa comando
             EndDevice ->> LoRaWAN.h : LoRaWAN::huart.readString()
-            Note over LoRaWAN.h, EndDevice : recepção usando 'polling'
             Note over LoRaWAN.h : processa resposta
+            Note over LoRaWAN.h : retorna status
         else
             EndDevice --> LoRaWAN.h : Nenhuma resposta
             Note over LoRaWAN.h : temporizador expira
+            Note over LoRaWAN.h : retorna ausência de resposta
         end
     end
 end
 ```
 
-
-
----
+O **princípio 5** mostrado na seção anterior pode ser visto nesse exemplo. O que se espera que seja implementado é exatamente o que o modelo apresentado no diagrama de sequência descreve. E na implementação da função abaixo pode-se perceber quase uma correlação direta do documentado para o implementado no código fonte. E esse é o resultado esperado.
 
 
 
@@ -769,13 +734,14 @@ LoRaWAN::eStatus LoRaWAN::send_AT_DR(LoRaWAN::eDR datarate, uint32_t timeout)
 
     status = this->sendAtCommand(AT::DR, AT::SET, payload);
 
-    if (status == LoRaWAN::ERROR) return status;
+    if (status == LoRaWAN::UART_ISSUE) return status;
 
     status = this->waitResponse(timeout);
 
     if (status == LoRaWAN::NO_RESPONSE) return status;
 
-    if (!this->buffer.compareTo(_at.getResponse(AT::OK))) return LoRaWAN::OK;
+    if (!this->buffer.compareTo(at.getResponse(AT::OK))) return LoRaWAN::OK;
+    if (!this->buffer.compareTo(at.getResponse(AT::ERROR))) return LoRaWAN::ERROR;
 
     return LoRaWAN::UNEXPECTED;
 }
