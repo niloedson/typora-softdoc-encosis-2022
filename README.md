@@ -765,18 +765,7 @@ end
 LoRaWAN::eStatus LoRaWAN::send_AT_DR(LoRaWAN::eDR datarate, uint32_t timeout)
 {
     LoRaWAN::eStatus status;
-    String payload;
-
-    switch (datarate) {
-    case LoRaWAN::DR0: payload = "0"; break;
-    case LoRaWAN::DR1: payload = "1"; break;
-    case LoRaWAN::DR2: payload = "2"; break;
-    case LoRaWAN::DR3: payload = "3"; break;
-    case LoRaWAN::DR4: payload = "4"; break;
-    case LoRaWAN::DR5: payload = "5"; break;
-    case LoRaWAN::DR6: payload = "6"; break;
-    default: payload = "0"; break;
-    }
+    String payload = String(datarate);
 
     status = this->sendAtCommand(AT::DR, AT::SET, payload);
 
